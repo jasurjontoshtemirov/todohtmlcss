@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TodoList</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-        *{
+
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             list-style-type: none;
         }
+
         body {
             font-family: 'Roboto', sans-serif;
         }
@@ -24,157 +29,198 @@
             padding: 20px;
             border: 2px solid red;
         }
+
         .container h1 {
             text-align: center;
             margin: 20px;
             text-transform: uppercase;
         }
+
         form {
             display: flex;
             justify-content: center;
             align-items: center;
         }
+
         input[type="search"] {
             min-width: 80%;
             padding: 10px;
-            border: 1px solid ;
+            border: 1px solid;
             border-radius: 5px;
             outline: none;
             color: rgb(80, 43, 226);
             padding-left: 15px;
         }
-        select{
+
+        select {
             margin-left: 20px;
             padding: 9px;
-            border: 1px solid ;
+            border: 1px solid;
             border-radius: 5px;
             outline: none;
             color: rgb(80, 43, 226);
         }
-        input::placeholder{
+
+        input::placeholder {
             position: relative;
 
         }
-        main{
-            margin-top:20px;
+
+        main {
+            margin-top: 20px;
             display: flex;
             justify-content: center;
         }
-        ul{
+
+        ul {
             width: 600px;
 
 
         }
+
         li {
             margin-top: 20px;
             display: flex;
-            justify-content:space-between;
+            justify-content: space-between;
             align-items: center;
             padding: 10px;
             border-bottom: 2px solid #502be2;
         }
-        .inputval{
+
+        .inputval {
             display: flex;
             align-items: center;
 
         }
-        .active{
+
+     
+
+        .active {
             text-decoration: line-through;
+            color: grey;
 
         }
-        label{
+
+        label {
             cursor: pointer;
             margin-left: 20px;
             text-transform: uppercase;
         }
-        .chekboxInput{
+
+        .chekboxInput {
             color: #502be2;
             font-size: 30px;
             width: 20px;
             height: 20px;
         }
-        i:hover{
+
+        i:hover {
             cursor: pointer;
         }
-        .inputshow i{
+
+        .inputshow i {
             margin-left: 20px;
         }
-        .inputshow{
+
+        .inputshow {
             display: none;
         }
-        .list_item:hover .inputshow{
+
+        .list_item:hover .inputshow {
             display: block;
 
         }
-        input[type="checkbox"]{
-            background-color: red;
+
+        .list_item:hover input[type="checkbox"] {
+            background-color: #502be2;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
-       <div class="all">
-        <h1>todo list</h1>
-        <form>
-            <input type="search" name="task" id="task" placeholder="Search note...">
-            <select>
-                <option value="barchasi">All</option>
-                <option value="Note 1">Note 1</option>
-                <option value="Note 2">Note 2</option>
-                <option value="note 3">Note 3</option>
-            </select>
-        </form> 
-        <main>
-            <ul>
-                <li class="list_item">
-                    <div class="inputval">
-                        <input type="checkbox"
-                        class="chekboxInput" id="tasked">
-                    <label for="tasked">Note 1</label>
-                    </div>
-                    <div class="inputshow">
-                        <i class="fa-solid fa-pen" style="color: #ababab;"></i>
-                        <i class="fa-solid fa-trash"></i>
-                    </div>
+        <div class="all">
+            <h1>todo list</h1>
+            <form>
+                <input type="search" name="task" id="task" placeholder="Search note...">
+                <select>
+                    <option value="barchasi">All</option>
+                    <option value="Note 1">Note #1</option>
+                    <option value="Note 2">Note #2</option>
+                    <option value="note 3">Note #3</option>
+                </select>
+                
+            </form>
+            <button class="AddButton">AddAAA</button>
+            <main>
+                <ul>
+                    <li class="list_item">
+                        <div class="inputval">
+                            <input type="checkbox" class="chekboxInput" id="tasked">
+                            <label class="labels" for="tasked">Note #1</label>
+                        </div>
+                        <div class="inputshow">
+                            <i class="fa-solid fa-pen" style="color: #ababab;"></i>
+                            <i class="fa-solid fa-trash"></i>
+                        </div>
 
-                </li>
-                <li class="list_item">
-                    <div class="inputval">
-                        <input type="checkbox"
-                        class="chekboxInput"  id="taskeds">
-                    <label for="taskeds">Note 1</label>
-                    </div>
-                    <div class="inputshow">
-                        <i class="fa-solid fa-pen" style="color: #ababab;"></i>
-                        <i class="fa-solid fa-trash"></i>
-                    </div>
+                    </li>
+                    <li class="list_item">
+                        <div class="inputval">
+                            <input type="checkbox" class="chekboxInput" id="taskeds">
+                            <label class="labels" for="taskeds">Note #2</label>
+                        </div>
+                        <div class="inputshow">
+                            <i class="fa-solid fa-pen" style="color: #ababab;"></i>
+                            <i class="fa-solid fa-trash"></i>
+                        </div>
 
-                </li>
-                <li class="list_item">
-                    <div class="inputval">
-                        <input type="checkbox"
-                        class="chekboxInput" id="taske">
-                    <label for="taske">Note 1</label>
-                    </div>
-                    <div class="inputshow">
-                        <i class="fa-solid fa-pen" style="color: #ababab;"></i>
-                        <i class="fa-solid fa-trash"></i>
-                    </div>
+                    </li>
+                    <li class="list_item">
+                        <div class="inputval">
+                            <input type="checkbox" class="chekboxInput" id="taske">
+                            <label class="labels" for="taske">Note #3</label>
+                        </div>
+                        <div class="inputshow">
+                            <i class="fa-solid fa-pen" style="color: #ababab;"></i>
+                            <i class="fa-solid fa-trash"></i>
+                        </div>
 
-                </li>
-            </ul>
-        </main>  
-       </div>         
+                    </li>
+                </ul>
+            </main>
+        </div>
     </div>
 
     <script>
-        const tasked=document.querySelector('#tasked');
-        const label=document.querySelector('label')
-        const li=document.querySelector('li')
-        tasked.addEventListener('click',()=>{
-            label.classList.toggle('active');
+        const tasked = document.querySelectorAll('.labels');
+        const list = document.querySelector('ul')
+        const AddButton = document.querySelector('.AddButton');
+        AddButton.addEventListener('click', (s) => {
+            s.preventDefault()
+            const li = document.createElement('li')
+            li.classList.add('list_item')
+            li.innerHTML = `
+             
+                        <div class="inputval">
+                            <input type="checkbox" class="chekboxInput" id="taskeda">
+                            <label class="labels" for="taskeda">Note #1</label>
+                        </div>
+                        <div class="inputshow">
+                            <i class="fa-solid fa-pen" style="color: #ababab;"></i>
+                            <i class="fa-solid fa-trash"></i>
+                        </div>
 
+            `;
+            list.append(li)
+        })
+
+        tasked.forEach((item) => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('active')
+            })
         })
     </script>
 </body>
+
 </html>
